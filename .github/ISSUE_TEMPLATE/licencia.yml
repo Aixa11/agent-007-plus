@@ -1,0 +1,33 @@
+name: Solicitar licencia
+description: Pide la factura de Capas, Particular u Organización
+title: "Licencia: "
+labels: []
+body:
+  - type: dropdown
+    id: licencia
+    attributes:
+      label: Licencia
+      options:
+        - Capas — 1.800 USD / año — solo paquetes de reglas
+        - Particular — 2.400 USD / año — proyecto completo, una persona
+        - Organización — 12.000 USD / año — proyecto completo, una entidad
+    validations:
+      required: true
+  - type: input
+    id: github
+    attributes:
+      label: Usuario de GitHub que debe recibir el acceso
+      placeholder: usuario
+    validations:
+      required: true
+  - type: textarea
+    id: entidad
+    attributes:
+      label: Nombre de la persona o de la entidad que factura
+    validations:
+      required: true
+  - type: textarea
+    id: nota
+    attributes:
+      label: Nota
+      description: País de facturación u otra condición. No escribas secretos.
