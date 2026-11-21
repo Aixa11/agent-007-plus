@@ -2,16 +2,24 @@
   <img src="./assets/hero-banner.png" alt="CENTINELA. Agent 007 Plus. El agente lee, no se aprueba solo y no apaga su propia parada." width="100%" />
 </p>
 
-<h1 align="center">Agent 007 Plus: el control de la revisión</h1>
+<p align="center">
+  <img src="https://img.shields.io/badge/oferta-pública-b22334?style=flat-square&labelColor=1c1f24" alt="Oferta pública" />
+</p>
+
+<h1 align="center">Agent 007 Plus</h1>
 
 <p align="center">
   <strong>Lee el repositorio · Publica solo lo que una regla demuestra · El agente no se aprueba · La parada no la administra el agente</strong>
 </p>
 
 <p align="center">
-  <a href="https://aixa11.github.io/agent-007-plus/">Landing</a> ·
-  <a href="https://github.com/Aixa11/Agent-007">Agente público</a> ·
-  <a href="https://github.com/Aixa11/agent-007-plus/issues/new?template=licencia.yml">Pedir licencia</a>
+  <a href="https://aixa11.github.io/agent-007-plus/">Landing</a>
+  ·
+  <a href="https://github.com/Aixa11/Agent-007">Agente 007</a>
+  ·
+  <a href="https://github.com/Aixa11/agent-007-plus/issues/new?template=licencia.yml">Licencia</a>
+  ·
+  <a href="#qué-se-abre-al-pagar">Precios</a>
 </p>
 
 ## Qué es Agent 007 Plus
