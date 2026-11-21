@@ -1,60 +1,64 @@
 <p align="center">
-  <img src="./assets/hero-banner.png" alt="CENTINELA. Agent 007 Plus. El agente lee, no se aprueba solo y no apaga su propia parada." width="100%" />
+  <a href="./README.md">English</a> · <a href="./README.es.md">Español</a>
 </p>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/oferta-pública-b22334?style=flat-square&labelColor=1c1f24" alt="Oferta pública" />
+  <img src="./assets/hero-banner-en.png" alt="CENTINELA. Agent 007 Plus. The agent reads. It does not approve itself and it does not switch off its own stop." width="100%" />
+</p>
+
+<p align="center">
+  <img src="https://img.shields.io/badge/offer-public-b22334?style=flat-square&labelColor=1c1f24" alt="Public offer" />
 </p>
 
 <h1 align="center">Agent 007 Plus</h1>
 
 <p align="center">
-  <strong>Lee el repositorio · Publica solo lo que una regla demuestra · El agente no se aprueba · La parada no la administra el agente</strong>
+  <strong>Reads the repository · Publishes only what a rule can prove · The agent does not approve itself · The agent does not control the stop</strong>
 </p>
 
 <p align="center">
   <a href="https://aixa11.github.io/agent-007-plus/">Landing</a>
   ·
-  <a href="https://github.com/Aixa11/Agent-007">Agente 007</a>
+  <a href="https://github.com/Aixa11/Agent-007">Agent 007</a>
   ·
-  <a href="https://github.com/Aixa11/agent-007-plus/issues/new?template=licencia.yml">Licencia</a>
+  <a href="https://github.com/Aixa11/agent-007-plus/issues/new?template=licencia.yml">License</a>
   ·
-  <a href="#qué-se-abre-al-pagar">Precios</a>
+  <a href="#what-opens-after-payment">Prices</a>
 </p>
 
-## Qué es Agent 007 Plus
+## What is Agent 007 Plus
 
-Esta es la vidriera. El producto no está en este repositorio. Agent 007 Plus lee un sistema que ya existe, deja el hallazgo escrito y puede parar la revisión sin que el agente apague su propio control.
+This repository is the shop window. The product is not here. Agent 007 Plus reads a system that already exists, writes the finding down, and can stop the review without letting the agent switch off its own control.
 
-El agente público sigue en [Aixa11/Agent-007](https://github.com/Aixa11/Agent-007), bajo Apache 2.0. Plus es otra licencia: uso interno, sin redistribución.
+The public agent stays in [Aixa11/Agent-007](https://github.com/Aixa11/Agent-007), under Apache 2.0. Plus is a different license: internal use, no redistribution.
 
-La compra tiene tres pasos:
+A purchase has three steps:
 
-1. **Elegir** la licencia y abrir la solicitud.
-2. **Pagar** la factura, fuera de GitHub.
-3. **Entrar** a un solo repositorio privado, el de esa fila.
+1. **Choose** the license and open the request.
+2. **Pay** the invoice, outside GitHub.
+3. **Enter** one private repository, the one in that row.
 
-## Qué se abre al pagar
+## What opens after payment
 
-GitHub no cobra y no puede habilitar una carpeta dentro de un repositorio. El acceso es a un repositorio entero. Por eso cada precio abre un repositorio distinto.
+GitHub does not take payment and cannot open one folder inside a repository. Access is to a whole repository. Each price opens a different one.
 
-| Licencia | Precio | Repositorio que se habilita |
+| License | Price | Repository that opens |
 | --- | --- | --- |
-| Capas | 1.800 USD / año | [agent-007-plus-capas](https://github.com/Aixa11/agent-007-plus-capas), privado. Solo los paquetes de reglas. No incluye runtime, consola ni aislamiento. |
-| Particular | 2.400 USD / año | [agent-007-plus-entrega](https://github.com/Aixa11/agent-007-plus-entrega), privado. Proyecto completo para una persona. |
-| Organización | 12.000 USD / año | El mismo repositorio completo, para los operadores de una entidad, con una capa de reglas nueva en el año. |
+| Layers | 1,800 USD / year | [agent-007-plus-capas](https://github.com/Aixa11/agent-007-plus-capas), private. Rule packs only. No runtime, no console, no isolation. |
+| Individual | 2,400 USD / year | [agent-007-plus-entrega](https://github.com/Aixa11/agent-007-plus-entrega), private. The full project, for one person. |
+| Organization | 12,000 USD / year | The same full repository, for the operators of one entity, plus one new rule pack that year. |
 
-Impuestos aparte. El pago no se hace en GitHub.
+Taxes extra. Payment is not made on GitHub.
 
-## Cómo se compra
+## How to buy
 
-1. Abre una solicitud con el tipo de licencia: [Nueva licencia](https://github.com/Aixa11/agent-007-plus/issues/new?template=licencia.yml).
-2. Recibes la factura correspondiente.
-3. Cuando el pago está acreditado, se invita a tu usuario de GitHub solo al repositorio de esa fila.
-4. Al vencer el año, se retira la invitación.
+1. Open a request with the license type: [New license](https://github.com/Aixa11/agent-007-plus/issues/new?template=licencia.yml).
+2. You receive the invoice.
+3. When the payment has cleared, your GitHub user is invited to the repository in that row, and to no other.
+4. When the year ends, the invitation is removed.
 
-La landing del mismo texto está en [https://aixa11.github.io/agent-007-plus/](https://aixa11.github.io/agent-007-plus/).
+The same text, with a language switch, is on the landing: [https://aixa11.github.io/agent-007-plus/](https://aixa11.github.io/agent-007-plus/).
 
-## Qué no incluye la licencia de capas
+## What the Layers license does not include
 
-Los JSON de reglas. No el supervisor, no la consola CENTINELA, no los perfiles `gate`, `process` y `os-account`. Esas piezas están en la entrega completa.
+The rule JSON files. Not the supervisor, not the CENTINELA console, not the `gate`, `process`, and `os-account` profiles. Those pieces are in the full delivery.

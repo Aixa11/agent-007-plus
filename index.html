@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -8,46 +8,118 @@
     :root { color-scheme: dark; }
     body { margin: 0; background: #000; color: #f4f1ea; font-family: Inter, "Segoe UI", sans-serif; line-height: 1.5; }
     main { max-width: 760px; margin: 0 auto; padding: 48px 20px 72px; }
-    img { width: 100%; height: auto; }
+    img { width: min(100%, 720px); height: auto; }
     h1 { font-weight: 560; letter-spacing: 0.08em; font-size: 28px; }
     a { color: #f3b36a; }
     table { width: 100%; border-collapse: collapse; margin: 20px 0 28px; }
     th, td { text-align: left; padding: 12px 8px; border-top: 1px solid #2b2f36; vertical-align: top; }
     th { color: #f3b36a; font-weight: 560; }
     .price { color: #d8672a; white-space: nowrap; }
+    .lang { margin: 18px 0 8px; }
+    .lang button { background: transparent; color: #b7b2a8; border: 0; padding: 0; font: inherit; cursor: pointer; }
+    .lang button[aria-current="true"] { color: #f4f1ea; }
   </style>
 </head>
 <body>
   <main>
-    <img src="./assets/hero-banner.png" alt="CENTINELA. Agent 007 Plus. El agente lee, no se aprueba solo y no apaga su propia parada." />
-    <h1>AGENT 007 PLUS</h1>
-    <p><strong>Lee el repositorio · Publica solo lo que una regla demuestra · El agente no se aprueba · La parada no la administra el agente</strong></p>
-    <p>Agent 007 Plus revisa un sistema que ya existe, publica el cambio mínimo y puede parar la revisión sin que el agente apague su propio control. El código no está en esta página.</p>
-    <p>GitHub no procesa el pago y no abre una carpeta de un repositorio privado. Cada precio habilita un repositorio entero, por invitación, después de la factura.</p>
+    <img id="banner" src="./assets/hero-banner-en.png" alt="CENTINELA. Agent 007 Plus." />
+    <p class="lang">
+      <button type="button" id="to-en" aria-current="true">English</button>
+      ·
+      <button type="button" id="to-es">Español</button>
+    </p>
+    <h1 id="title">THE OFFER</h1>
+    <p id="lead"></p>
+    <p id="note"></p>
     <table>
       <thead>
-        <tr><th>Licencia</th><th>Precio</th><th>Se habilita</th></tr>
+        <tr><th id="h-license">License</th><th id="h-price">Price</th><th id="h-opens">What opens</th></tr>
       </thead>
       <tbody>
         <tr>
-          <td>Capas</td>
-          <td class="price">1.800 USD / año</td>
-          <td>Solo los paquetes de reglas. Sin runtime, sin consola y sin aislamiento.</td>
+          <td id="r1-name">Layers</td>
+          <td class="price">1,800 USD / year</td>
+          <td id="r1-what"></td>
         </tr>
         <tr>
-          <td>Particular</td>
-          <td class="price">2.400 USD / año</td>
-          <td>El proyecto completo, para una persona.</td>
+          <td id="r2-name">Individual</td>
+          <td class="price">2,400 USD / year</td>
+          <td id="r2-what"></td>
         </tr>
         <tr>
-          <td>Organización</td>
-          <td class="price">12.000 USD / año</td>
-          <td>El proyecto completo para una entidad, con una capa nueva en el año.</td>
+          <td id="r3-name">Organization</td>
+          <td class="price">12,000 USD / year</td>
+          <td id="r3-what"></td>
         </tr>
       </tbody>
     </table>
-    <p><a href="https://github.com/Aixa11/agent-007-plus/issues/new?template=licencia.yml">Solicitar una licencia</a></p>
-    <p>El agente abierto sigue en <a href="https://github.com/Aixa11/Agent-007">Aixa11/Agent-007</a>.</p>
+    <p><a id="ask" href="https://github.com/Aixa11/agent-007-plus/issues/new?template=licencia.yml">Request a license</a></p>
+    <p id="open-agent"></p>
   </main>
+  <script>
+    var copy = {
+      en: {
+        title: "THE OFFER",
+        lead: "Agent 007 Plus reviews a system that already exists, publishes the smallest change, and can stop the swarm without letting the agent switch off its own control. The code is not on this page.",
+        note: "GitHub does not take the payment and does not open a folder inside a private repository. Each price opens a whole repository, by invitation, after the invoice.",
+        headers: ["License", "Price", "What opens"],
+        rows: ["Layers", "Individual", "Organization"],
+        what: [
+          "Rule packs only. No runtime, no console, and no isolation.",
+          "The full project, for one person.",
+          "The full project for one entity, plus one new rule pack that year."
+        ],
+        ask: "Request a license",
+        open: "The open agent remains at ",
+        banner: "./assets/hero-banner-en.png",
+        lang: "en"
+      },
+      es: {
+        title: "LA OFERTA",
+        lead: "Agent 007 Plus revisa un sistema que ya existe, publica el cambio mínimo y puede parar el enjambre sin que el agente apague su propio control. El código no está en esta página.",
+        note: "GitHub no procesa el pago y no abre una carpeta de un repositorio privado. Cada precio habilita un repositorio entero, por invitación, después de la factura.",
+        headers: ["Licencia", "Precio", "Se habilita"],
+        rows: ["Capas", "Particular", "Organización"],
+        what: [
+          "Solo los paquetes de reglas. Sin runtime, sin consola y sin aislamiento.",
+          "El proyecto completo, para una persona.",
+          "El proyecto completo para una entidad, con una capa nueva en el año."
+        ],
+        ask: "Solicitar una licencia",
+        open: "El agente abierto sigue en ",
+        banner: "./assets/hero-banner-es.png",
+        lang: "es"
+      }
+    };
+    function apply(code) {
+      var t = copy[code];
+      document.documentElement.lang = t.lang;
+      document.getElementById("banner").src = t.banner;
+      document.getElementById("title").textContent = t.title;
+      document.getElementById("lead").textContent = t.lead;
+      document.getElementById("note").textContent = t.note;
+      document.getElementById("h-license").textContent = t.headers[0];
+      document.getElementById("h-price").textContent = t.headers[1];
+      document.getElementById("h-opens").textContent = t.headers[2];
+      document.getElementById("r1-name").textContent = t.rows[0];
+      document.getElementById("r2-name").textContent = t.rows[1];
+      document.getElementById("r3-name").textContent = t.rows[2];
+      document.getElementById("r1-what").textContent = t.what[0];
+      document.getElementById("r2-what").textContent = t.what[1];
+      document.getElementById("r3-what").textContent = t.what[2];
+      document.getElementById("ask").textContent = t.ask;
+      document.getElementById("open-agent").textContent = "";
+      document.getElementById("open-agent").append(t.open);
+      var link = document.createElement("a");
+      link.href = "https://github.com/Aixa11/Agent-007";
+      link.textContent = "Aixa11/Agent-007";
+      document.getElementById("open-agent").append(link);
+      document.getElementById("to-en").setAttribute("aria-current", code === "en" ? "true" : "false");
+      document.getElementById("to-es").setAttribute("aria-current", code === "es" ? "true" : "false");
+    }
+    document.getElementById("to-en").addEventListener("click", function () { apply("en"); });
+    document.getElementById("to-es").addEventListener("click", function () { apply("es"); });
+    apply(new URLSearchParams(location.search).get("lang") === "es" ? "es" : "en");
+  </script>
 </body>
 </html>
